@@ -1,0 +1,42 @@
+>ssh -i private-ssh-key-2024-08-03.key ubuntu@168.138.89.57
+
+mkdir app1
+
+sudo apt-get -y update
+
+sudo apt install git
+
+git clone https://github.com/username/repository.git
+
+
+sudo apt-get -y install libgl1
+
+sudo apt-get install -y libglib2.0-0 libsm6 libxrender1 libxext6
+
+sudo apt install python3-pip
+
+
+sudo apt install python3.10-venv
+python3 -m venv deepface_env
+
+
+
+
+pip install --no-cache-dir -r requirements.txt
+
+pip install streamlit
+
+
+note: vnc port should be 22 to intial login.
+to the VNC add the ingress rule to listen to 8501 port
+
+TCP
+source ALL, target: 8501
+
+
+
+sudo 
+
+sudo apt install firewalld
+sudo firewall-cmd --zone=public --add-port=8501/tcp --permanent
+firewall-cmd --reload
