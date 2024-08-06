@@ -16,5 +16,6 @@ RUN pip install streamlit
 # Copy the rest of the application code into the container
 COPY . .
 
+EXPOSE 8501
 # Command to run the application
 CMD ["streamlit","run","DeepFaceVid-v2.py", "--server.port=8501","--server.address=0.0.0.0"]
